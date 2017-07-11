@@ -26,11 +26,11 @@ let hero = document.querySelector("#hero");
 let herotitle = document.createElement ( "h1" );
 let herotext = document.createElement ("p");
 
-let herotitletext = document.createTextNode ("ACME Design Studio");
-let heroptext = document.createTextNode ("We are dedicated to producing the best designs in the world.");
-
 hero.appendChild(herotitle);
 hero.appendChild(herotext);
+
+let herotitletext = document.createTextNode ("ACME Design Studio");
+let heroptext = document.createTextNode ("We are dedicated to producing the best designs in the world.");
 
 herotitle.appendChild(herotitletext);
 hero.appendChild(heroptext);
@@ -56,16 +56,35 @@ let liimage = document.createElement("img");
 let lih2 = document.createElement("h2");
 let lih2text = document.createTextNode(portfolioData[i].h2);
 
-li.appendChild (liimage);
-li.appendChild (lih2);
-
-lih2.appendChild (lih2text);
-
 liimage.setAttribute ("src", portfolioData[i].img);
 
+li.appendChild (liimage);
+lih2.appendChild (lih2text);
+li.appendChild (lih2);
 portfolio.appendChild (li);
 }
 
 /***************************************************/
 /* 3. Navigation Dropdown **************************/
 /***************************************************/
+
+let dropdown = document.querySelector("#dropdown");
+let nav = document.querySelector("#main_navigation");
+
+// function visible(){
+//   if (dropdown.style.visibility === "hidden") {
+//     dropdown.style.visibility = "visible"
+//   }
+//   else {
+//     dropdown.style.visibility = "hidden"
+//   }
+// }
+
+function visible(){
+  nav.classList.toggle("visible");
+}
+
+dropdown.addEventListener("click", visible)
+
+// The eventlistener is for the dropdown button but
+// the button is inside of the nav bar

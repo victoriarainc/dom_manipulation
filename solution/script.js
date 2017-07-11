@@ -57,11 +57,6 @@ for( let i = 0; i < portfolioData.length; i++ ){
 
     portfolioList.appendChild( li );
 }
-
-
-
-
-
 /***************************************************/
 /* 3. Navigation Dropdown **************************/
 /***************************************************/
@@ -73,6 +68,3 @@ function showDropdown(){
 }
 
 dropdown.addEventListener( "click", showDropdown );
-
-
-
